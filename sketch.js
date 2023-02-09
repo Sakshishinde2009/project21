@@ -27,7 +27,6 @@ function setup() {
   ghost.addImage("ghost", ghostImg);
 
   invisibleBlock = createSprite(150,500,50,10);
-  ghost.collide = invisibleBlock;
   invisibleBlock.visible = false;
 }
 
@@ -41,10 +40,10 @@ function draw() {
   if (gameState === "play") {
     
     if(keyDown("space")){
-        ghost.velocityY = -10;
+        ghost.velocityY = -9;
        }
          
-        
+     ghost.velocityY =  invisibleBlock.velocityY;  
   
     spawnstones();
 
@@ -84,8 +83,5 @@ function spawnstones()
     invisibleBlock.lifetime = 800;
 
     stonesGroup.add(stone);
-    invisibleBlock.debug = true;
+    invisibleBlock.debug = false;
     invisibleBlockGroup.add(invisibleBlock);
-  }
-}
- 
