@@ -62,7 +62,7 @@ function draw() {
 }
 
 function spawnstones()
- {
+{
   if (frameCount % 60 === 0) {
     var stone = createSprite(200, -50);
     var invisibleBlock = createSprite(200,15);
@@ -85,4 +85,4 @@ function spawnstones()
     stonesGroup.add(stone);
     invisibleBlock.debug = false;
     invisibleBlockGroup.add(invisibleBlock);
-  }
+}
