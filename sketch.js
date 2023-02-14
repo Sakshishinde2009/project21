@@ -85,3 +85,4 @@ function spawnstones()
     stonesGroup.add(stone);
     invisibleBlock.debug = false;
     invisibleBlockGroup.add(invisibleBlock);
+  }
